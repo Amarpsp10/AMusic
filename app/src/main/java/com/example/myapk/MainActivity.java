@@ -261,9 +261,12 @@ public class MainActivity extends AppCompatActivity {
 
         // to retrieve the thumbnail of all song files by cover picture function it will decode the bytes into bitmap and take the parameter location of file
         // if thumbnail is not found then it saves null on that poistion
+
+
         for (int i = 0; i<files.length; i++){
             bitmaps[i] = coverPicture(files[i]);
         }
+
 
 
         // our Song custom adapter show the the song files into listView-audioView
