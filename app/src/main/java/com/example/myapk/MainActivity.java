@@ -257,8 +257,14 @@ public class MainActivity extends AppCompatActivity {
       }while(audioCursor.moveToNext());
             }
         }
-
-
+        if(files.length==0) {
+            Toast.makeText(this, "No Song Available" + files.length, Toast.LENGTH_SHORT).show();
+            seekBar.setEnabled(false);
+            playPauseB.setEnabled(false);
+            nextSong.setEnabled(false);
+            forSongButton.setEnabled(false);
+            preSong.setEnabled(false);
+        }
         // to retrieve the thumbnail of all song files by cover picture function it will decode the bytes into bitmap and take the parameter location of file
         // if thumbnail is not found then it saves null on that poistion
 
